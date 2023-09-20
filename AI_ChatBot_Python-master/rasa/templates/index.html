@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chatbot App</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="chatbot">
+      <h1>Chatbot</h1>
+      <div class="conversation">
+        <div class="message from-bot">
+          <p>Hello! How can I help you today?</p>
+        </div>
+      </div>
+      <form id="message-form">
+        <input type="text" id="message-input" placeholder="Type your message here">
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    <script >const messageForm = document.getElementById('message-form');
+        const messageInput = document.getElementById('message-input');
+        const conversation = document.querySelector('.conversation');
+        console.log(messageInput.value);
+        console.log("hy");
+        messageForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const message = messageInput.value.trim();
+          if (message !== '') {
+            addMessage(message, 'from-user');
+            sendMessage(message);
+          }
+          messageInput.value = '';
+        });
+        
+        function addMessage(message, from) {
+          const messageElement = document.createElement('div');
+          messageElement.classList.add('message', from);
+          messageElement.innerHTML = `<p>${message}</p>`;
+          conversation.appendChild(messageElement);
+        }
+        
+        function sendMessage(message) {
+  fetch('http://127.0.0.1:5000/get-response', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ message: message })
+  })
+  .then(response => response.json())
+  .then(data => {
+    addMessage(data.response, 'from-bot');
+    if (data.image_path) {
+      const messageElement = document.createElement('div');
+      messageElement.classList.add('message', 'from-bot');
+      const imgElement = document.createElement('img');
+      imgElement.src = data.image_path;
+      messageElement.appendChild(imgElement);
+      conversation.appendChild(messageElement);
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+}
+        
+        </script>
+  </body>
+</html>

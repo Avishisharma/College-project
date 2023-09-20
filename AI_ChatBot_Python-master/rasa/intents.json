@@ -1,0 +1,209 @@
+{"intents": [
+
+    
+
+    {"tag": "feedforward",
+    "patterns": ["What is a feedforward network in an Artificial Neural Network?", "Can you explain the structure of a feedforward network?", "What are the advantages of a feedforward network?"],
+    "responses": ["A feedforward network is a type of Artificial Neural Network where the connections between neurons form a directed acyclic graph. The information flows in only one direction, from the input layer to the output layer.", "A feedforward network is structured as a series of layers of artificial neurons, with each layer connected to the next in a one-way direction. The input data is fed into the input layer, and the output is produced by the output layer.", "The advantages of a feedforward network include its simplicity and ease of training, as well as its ability to model complex non-linear relationships in the data."],
+    "image":["data:Example-of-a-Multi-Layer-Feedforward-Network (1).png"],
+    "context_set": ""
+    },
+    {
+        "tag": "show_graph",
+        "patterns": ["show me a graph ","show me the graph", "can you display the graph?", "graph please","show me a graph","graph"],
+        "responses": ["Sure, here is the graph: {graph}"]
+    },
+     {
+        "tag": "sigmoid_g",
+        "patterns": ["sigmoid graph","show me a sigmoid graph ","show me the sigmoid graph", "can you display the sigmoid graph?", "sigmoid graph please","show me a sigmoid graph","graph sigmoid"],
+        "responses": ["Sure, here is the sigmoid graph: {graph}"]
+    },
+    
+    {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+         "responses": ["Hi there, how can I help?"],
+         
+         "context_set": ""
+        },
+    {"tag": "chatbot",
+         "patterns": ["Who are you", "who you work for", "who is your favourite","tell me something about you"],
+         "responses": ["I AM A CHATBOT, I WORK FOR AVISHI and team."]
+        },
+        {"tag": "help",
+         "patterns": ["how can you help me?", "will you pleese help me?", "i need you help?" ],
+         "responses": ["you can ask me anything related to ann"]
+         
+        },
+        
+        
+        {"tag": "actvation_type",
+        "patterns": ["type","What are the types of Activation functions ?"," What are the types of activation function ?", "Can you explain the different type of activation function?", "What are the common type of activation function ?","types of activation function","what are the types of activation functions?"],
+        "responses": ["There are several types of Activation functions \n 1 Linear \n  2 Step-function \n  3 Sigmoid \n  4 Relu \n  5 Tanh \n  6 Hyberbolic tangent \n  7 Identity"
+                     
+                     ],
+        "context_set": ""
+        },
+        {"tag": "ann_history",
+        "patterns": ["What is the history of Artificial Neural Networks?", "Who invented ANNs?", "When were ANNs first developed?","Father of"],
+        "responses": ["Artificial Neural Networks were first developed in the 1940s and 1950s by researchers such as Warren McCulloch and Walter Pitts. However, they were not widely used until the 1980s and 1990s, when advances in computing power and machine learning algorithms made them more practical.", "The idea of Artificial Neural Networks was first proposed by Warren McCulloch and Walter Pitts in 1943. Since then, many researchers have contributed to the development of ANNs.", "Artificial Neural Networks have a long history dating back to the 1940s and 1950s. They have undergone many advancements over the years and are still an active area of research today."],
+        "context_set": ""
+        },
+        {"tag": "ann_structure",
+        "patterns": ["What is the structure of an Artificial Neural Network?", "How is an ANN structured?", "What are the components of an ANN?"],
+        "responses": ["An Artificial Neural Network is composed of layers of artificial neurons that are connected by synapses. The neurons in each layer process the input data and pass it on to the neurons in the next layer. The output of the final layer is the predicted output of the network.", "An ANN is structured as a series of layers of artificial neurons. The input layer receives the data, which is then processed by the hidden layers. The output layer produces the final output of the network.", "An Artificial Neural Network consists of an input layer, one or more hidden layers, and an output layer. Each layer is composed of artificial neurons that process the input data and pass it on to the next layer."],
+        "context_set": ""
+        },
+        
+        {"tag": "ann_intro",
+        "patterns": ["What is an Artificial Neural Network?", "Can you explain what an ANN is?", "What does an ANN do?","What is ann?"],
+        "responses": ["An Artificial Neural Network (ANN) is a computational model based on the structure and function of the human brain. It is used to learn and make predictions from data.", "An ANN is a machine learning model that can learn from and make predictions on data. It is inspired by the way the human brain processes information.", "An ANN is a type of machine learning algorithm that can be used to learn patterns in data and make predictions."],
+        "context_set": ""
+        },
+        {"tag": "ann_training",
+        "patterns": ["How are Artificial Neural Networks trained?", "What is the training process for ANNs?", "Can you explain ANN training?"],
+        "responses": ["Artificial Neural Networks are trained using a process called backpropagation. During training, the network adjusts the weights of the connections between neurons in order to minimize the error between the predicted output and the actual output. The training process continues until the error is minimized.", "ANNs are trained using a process called backpropagation, which involves adjusting the weights of the connections between neurons based on the error between the predicted output and the actual output. The process continues until the error is minimized.", "The training process for ANNs involves adjusting the weights of the connections between neurons in order to minimize the error between the predicted output and the actual output. This is done using a process called backpropagation."],
+        "context_set": ""
+        },
+
+        {"tag": "ann_activation_function",
+"patterns": ["What is an activation function in an Artificial Neural Network?", "Why do we need activation functions in ANNs?", "Can you explain the role of activation functions in ANNs?"],
+"responses": ["An activation function is a mathematical function applied to the output of each neuron in an Artificial Neural Network. It introduces non-linearity into the network and allows it to learn more complex patterns in the data.", "Activation functions are needed in ANNs to introduce non-linearity into the network. Without activation functions, the network would be limited to learning only linear relationships in the data.", "The role of activation functions in ANNs is to introduce non-linearity into the network. This allows the network to learn more complex patterns in the data."],
+"context_set": ""
+},
+{"tag": "sigmoid",
+"patterns": ["What is the sigmoid function in an Artificial Neural Network?", "Why is the sigmoid function used in ANNs?", "Can you explain the properties of the sigmoid function?","what is a sigmoid function?"],
+"responses": ["The sigmoid function is a popular activation function used in Artificial Neural Networks. It maps the input values to a range between 0 and 1, which can be interpreted as a probability.", "The sigmoid function is used in ANNs because it is a good choice for introducing non-linearity into the network. It is also easy to compute and has a simple derivative.", "The sigmoid function is a smooth, S-shaped curve that maps the input values to a range between 0 and 1. It is monotonic and has a simple derivative, which makes it easy to use in ANNs."],
+"context_set": ""
+},
+    
+{"tag": "ann_relu",
+"patterns": ["Relu","What is the ReLU function","What is the ReLU","What is the ReLU function in an Artificial Neural Network?", "Why is the ReLU function used in ANNs?", "Can you explain the properties of the ReLU function?"],
+"responses": ["The ReLU function is a popular activation function used in Artificial Neural Networks. It maps the input values to a range between 0 and infinity, and is particularly effective in deep learning architectures.", "The ReLU function is used in ANNs because it is a good choice for introducing non-linearity into the network, especially in deep learning architectures. It is also computationally efficient.", "The ReLU function is a simple, piecewise linear function that maps the input values to a range between 0 and infinity. It is easy to compute and has a derivative that is either 0 or 1, which makes it well-suited for backpropagation."],
+"context_set": ""
+},
+
+{"tag": "ann_activation_function",
+"patterns": ["What is an activation function in an Artificial Neural Network?", "Can you explain the role of activation functions in ANNs?", "What are the types of activation functions used in ANNs?"],
+"responses": ["An activation function in an Artificial Neural Network determines the output of a neuron based on its input. It introduces non-linearity into the network, allowing it to learn more complex patterns in the data.", "Activation functions play a crucial role in Artificial Neural Networks by introducing non-linearity into the model. Without them, the network would be limited to learning linear patterns in the data.", "Some common types of activation functions used in ANNs are the sigmoid function, ReLU (Rectified Linear Unit), and tanh (Hyperbolic Tangent) function."],
+"context_set": ""
+},
+
+{"tag": "ann_backpropagation",
+"patterns": ["What is backpropagation","What is backpropagation in an Artificial Neural Network?", "Can you explain the backpropagation algorithm?", "How does backpropagation work in ANNs?"],
+"responses": ["Backpropagation is a learning algorithm used in Artificial Neural Networks. It involves adjusting the weights of the connections between neurons in the network based on the error between the predicted output and the actual output. The process is repeated until the error is minimized.", "Backpropagation is a widely used learning algorithm in ANNs. It involves propagating the error backwards through the network and adjusting the weights of the connections between neurons based on the error. The process is repeated until the error is minimized.", "Backpropagation is a type of supervised learning algorithm used in ANNs. It involves adjusting the weights of the connections between neurons based on the error between the predicted output and the actual output. The process is repeated until the error is minimized."],
+"context_set": ""
+},
+{"tag": "ann_overfitting",
+"patterns": ["What is overfitting in an Artificial Neural Network?", "How can you prevent overfitting in ANNs?", "What are some strategies to avoid overfitting in ANNs?"],
+"responses": ["Overfitting is a phenomenon in ANNs where the model becomes too complex and begins to fit the training data too closely, resulting in poor generalization to new data. Strategies to prevent overfitting include using regularization techniques, such as L1 and L2 regularization, and using early stopping during training.", "Overfitting is a common problem in ANNs where the model becomes too complex and starts to fit the training data too closely. To prevent overfitting, regularization techniques such as dropout and weight decay can be used. Early stopping can also be employed during training to avoid overfitting."],
+"context_set": ""
+},
+{"tag": "ann_convolutional_networks",
+"patterns": ["What are Convolutional Neural Networks (CNNs)?", "Can you explain how CNNs work?", "What are the applications of CNNs?"],
+"responses": ["Convolutional Neural Networks (CNNs) are a type of Artificial Neural Network that are commonly used in image and video recognition. They use a specialized architecture with convolutional layers to extract features from the input data. CNNs have many applications, including image classification, object detection, and facial recognition.", "CNNs are a type of ANN that are commonly used in computer vision tasks such as image classification and object detection. They use convolutional layers to extract features from the input data and are trained using backpropagation. CNNs have many applications in fields such as self-driving cars, medical image analysis, and robotics.", "Convolutional Neural Networks (CNNs) are a specialized type of ANN that are designed for image and video recognition tasks. They use convolutional layers to extract features from the input data and can be trained using backpropagation. CNNs have many applications, including facial recognition, object detection, and image segmentation."],
+"context_set": ""
+},
+{"tag": "ann_topology",
+"patterns": ["What is the topology of an Artificial Neural Network?", "Can you explain the different types of network topologies used in ANNs ?", "What are the common types of network topologies in ANNs ?"],
+"responses": ["The topology of an Artificial Neural Network refers to the way the neurons are connected. Common types of network topologies include feedforward, recurrent, and convolutional networks.", "Different types of network topologies can be used in ANNs, depending on the problem being solved. Some common types include feedforward, recurrent, and convolutional networks.", "Feedforward, recurrent, and convolutional networks are some of the most commonly used network topologies in ANNs. Each type of network is suited to different types of problems."],
+"context_set": ""
+},
+{"tag": "biological_nn",
+"patterns": ["What is a biological neural network?", "Can you explain how biological neural networks work?", "What is the difference between artificial and biological neural networks?","what is bnn ?"],
+"responses": ["A biological neural network is the network of neurons and synapses that make up the nervous system of an organism. It is responsible for processing and transmitting information throughout the body.", "Biological neural networks are complex systems that use electrical and chemical signals to transmit information. They are capable of learning and adapting to new situations.", "Artificial neural networks are based on the structure and function of biological neural networks, but are simpler and less complex. One key difference is that biological neural networks are capable of self-repair and regeneration, while artificial neural networks are not."],
+"context_set": ""
+},
+{"tag": "genetic_algo_nn",
+"patterns": ["What is a genetic algorithm in an Artificial Neural Network?", "Can you explain how genetic algorithms work in ANNs?", "What is the role of genetic algorithms in ANNs?"],
+"responses": ["A genetic algorithm is an optimization algorithm used in Artificial Neural Networks. It involves using a population of networks and selecting the fittest individuals for reproduction and mutation. The process is repeated over several generations until a satisfactory solution is found.", "Genetic algorithms can be used to optimize the weights and topology of an Artificial Neural Network. The algorithm works by creating a population of networks and selecting the fittest individuals for reproduction and mutation. The process is repeated over several generations until a satisfactory solution is found.", "Genetic algorithms are a powerful optimization technique used in ANNs. They can be used to optimize the weights and topology of the network, allowing it to learn more complex patterns in the data."],
+"context_set": ""
+},
+       
+
+        {"tag": "hours",
+         "patterns": ["What hours are you open?", "What are your hours?", "When are you open?" ],
+         "responses": ["We're open every day 9am-9pm", "Our hours are 9am-9pm every day"]
+        },
+        
+        
+       
+                
+                
+                {
+                "tag": "thanks",
+                "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful",
+                "Awesome, thanks",
+                "Thanks for helping me"
+                ],
+                "responses": [
+                "Happy to help!",
+                "Any time!",
+                "My pleasure"
+                ],
+                "context": [
+                ""
+                ]
+                },
+                
+                
+                
+                {
+                "tag": "jokes",
+                "patterns": [
+                "Tell me a joke",
+                "Joke",
+                "Make me laugh"
+                ],
+                "responses": [
+                "A perfectionist walked into a bar...apparently, the bar wasn't set high enough",
+                "I ate a clock yesterday, it was very time-consuming",
+                "Never criticize someone until you've walked a mile in their shoes. That way, when you criticize them, they won't be able to hear you from that far away. Plus, you'll have their shoes.",
+                "The world tongue-twister champion just got arrested. I hear they're gonna give him a really tough sentence.",
+                "I own the world's worst thesaurus. Not only is it awful, it's awful.",
+                "What did the traffic light say to the car? \"Don't look now, I'm changing.\"",
+                "What do you call a snowman with a suntan? A puddle.",
+                "How does a penguin build a house? Igloos it together",
+                "I went to see the doctor about my short-term memory problems – the first thing he did was make me pay in advance",
+                "As I get older and I remember all the people I’ve lost along the way, I think to myself, maybe a career as a tour guide wasn’t for me.",
+                "o what if I don't know what 'Armageddon' means? It's not the end of the world."
+                ],
+                "context": [
+                "jokes"
+                ]
+                },
+                {
+                "tag": "Identity",
+                "patterns": [
+                "Who are you",
+                "what are you"
+                ],
+                "responses": [
+                "I am Ted, a Deep-Learning chatbot"
+                ]
+                },
+                
+                
+    
+    
+    {"tag": "creation",
+        "patterns": ["Who created you?", "How were you made?", "How were you created?"],
+        "responses": ["I was created by Avishi sharma.", "I was trained on a text dataset using Deep Learning & Natural Language Processing techniques", "The real question is: Who created you?"]
+    },
+    {"tag": "name",
+        "patterns": ["My name is ", "I am name.", "I go by "],
+        "responses": ["Oh nice to meet you. Tell me how was your week?", "Nice to meet you. So tell me. How do you feel today?", "That's a great name. Tell me more about yourself."]
+    }
+   
+]
+}
+    
+    
+    
+    
+   
+    
+    
+    
